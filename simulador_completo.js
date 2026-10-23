@@ -21,6 +21,8 @@ ocultarSecciones = function(){
 
     document.getElementById("credito").classList.remove("activa"); 
 
+    document.getElementById("listaCreditos").classList.remove("activa");
+
 }
 
 //mostrar seccion(id)
