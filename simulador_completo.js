@@ -269,3 +269,27 @@ asignarCredito = function(){
 
     return creditosEncontrados;
 }
+
+//// pintar créditos en la tabla 
+
+pintarCreditos = function(creditos){
+
+    let contenido = "";
+    let credito;
+
+    for (let i = 0; i < creditos.length; i++){
+        credito = creditos[i];
+
+        contenido += "<tr>" +
+            "<td>" + credito.cedula + "</td>" +
+            "<td>" + credito.nombre + "</td>" +
+            "<td>" + credito.apellido + "</td>" +
+            "<td>" + credito.monto + "</td>" +
+            "<td>" + credito.tasa + "%</td>" +
+            "<td>" + credito.plazo + " años</td>" +
+            "<td>" + credito.cuota.toFixed(2) + "</td>" +
+            "</tr>";
+    }
+
+    document.getElementById("tablaCreditos").innerHTML = contenido;
+}
