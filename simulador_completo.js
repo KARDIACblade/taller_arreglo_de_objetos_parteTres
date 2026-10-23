@@ -293,3 +293,14 @@ pintarCreditos = function(creditos){
 
     document.getElementById("tablaCreditos").innerHTML = contenido;
 }
+
+//// buscar créditos de un cliente desde la pantalla
+
+buscarCreditosCliente = function(){
+
+    let cedula = recuperarTexto("buscarCedulaListado");
+
+    let creditosCliente = buscarCreditos(cedula);
+
+    pintarCreditos(creditosCliente);
+}
