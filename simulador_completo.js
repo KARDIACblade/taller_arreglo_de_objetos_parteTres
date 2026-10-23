@@ -253,3 +253,19 @@ asignarCredito = function(){
 
     creditos.push(credito);
 }
+
+//// buscar creditos
+
+    buscarCreditos = function(cedula){
+
+    let creditosEncontrados = [];
+
+    for (let i = 0; i < creditos.length; i++){
+
+        if (creditos[i].cedula == cedula){
+            creditosEncontrados.push(creditos[i]);
+        }
+    }
+
+    return creditosEncontrados;
+}
